@@ -9,8 +9,26 @@
 import UIKit
 
 class CameraViewController: UIViewController {
+    
+    @IBOutlet weak var capturePreviewView: UIView!
+    
+    let cameraController = CameraController()
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureCameraController()
+    }
+    
+    func configureCameraController() {
+        cameraController.prepare { error in
+            if let error = error {
+                print(error)
+            }
+            try? self.cameraController.displayPreview(on: self.capturePreviewView)
+        }
     }
 }

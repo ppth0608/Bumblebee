@@ -16,12 +16,28 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CKc-14-q2F">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="CKc-14-q2F" secondAttribute="bottom" id="7NW-wi-GQE"/>
+                            <constraint firstItem="CKc-14-q2F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EFF-V3-Vrc"/>
+                            <constraint firstAttribute="trailing" secondItem="CKc-14-q2F" secondAttribute="trailing" id="mt7-GH-uty"/>
+                            <constraint firstItem="CKc-14-q2F" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xoH-UA-g47"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="capturePreviewView" destination="CKc-14-q2F" id="QPo-Aa-nmZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
         </scene>
     </scenes>
 </document>
