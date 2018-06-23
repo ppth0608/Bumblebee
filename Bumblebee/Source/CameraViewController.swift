@@ -31,4 +31,10 @@ class CameraViewController: UIViewController {
             try? self.cameraController.displayPreview(on: self.capturePreviewView)
         }
     }
+    
+    @IBAction func captureButtonTapped(_ sender: UIButton) {
+        cameraController.captureImage { image, error in
+            
+        }
+    }
 }

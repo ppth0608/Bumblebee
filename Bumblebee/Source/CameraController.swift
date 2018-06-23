@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class CameraController {
+class CameraController: NSObject {
     
     // MARK: Error
     enum CameraControllerError: Error {
@@ -82,8 +82,6 @@ class CameraController {
             throw CameraControllerError.captureSessionIsMissing
         }
         photoOutput = AVCapturePhotoOutput()
-        photoOutput?.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey : AVVideoCodecType.jpeg])], completionHandler: nil)
-        
         if let photoOutput = photoOutput, captureSession.canAddOutput(photoOutput) {
             captureSession.addOutput(photoOutput)
         }
@@ -105,5 +103,39 @@ class CameraController {
             view.layer.insertSublayer(previewLayer, at: 0)
         }
         previewLayer?.frame = view.frame
+    }
+    
+    // MARK: Capture
+    typealias PhotoOuputCompletion = (UIImage?, Error?) -> Void
+    
+    var photoCaptureCompletionBlock: PhotoOuputCompletion?
+    
+    func captureImage(completion: @escaping PhotoOuputCompletion) {
+        guard let captureSession = captureSession, captureSession.isRunning else {
+            completion(nil, CameraControllerError.captureSessionIsMissing)
+            return
+        }
+        let settings = AVCapturePhotoSettings()
+        let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: Int(kCVPixelFormatType_32BGRA),
+                             kCVPixelBufferWidthKey as String: 160,
+                             kCVPixelBufferHeightKey as String: 160]
+        settings.previewPhotoFormat = previewFormat
+        photoCaptureCompletionBlock = completion
+        photoOutput?.capturePhoto(with: settings, delegate: self)
+    }
+}
+
+extension CameraController: AVCapturePhotoCaptureDelegate {
+    
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        guard error == nil else {
+            photoCaptureCompletionBlock?(nil, error)
+            return
+        }
+        guard let imageData = photo.fileDataRepresentation() else {
+            photoCaptureCompletionBlock?(nil, error)
+            return
+        }
+        photoCaptureCompletionBlock?(UIImage(data: imageData), nil)
     }
 }
