@@ -9,10 +9,10 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController {
+class WebViewController: ViewController {
     
     struct Constant {
-        static let toolBarHeight: CGFloat = UIScreen.main.iPhone10 ? 78 : 44
+        static let toolBarHeight: CGFloat = UIScreen.main.iPhone10 ? 78 : 60
     }
     
     @IBOutlet fileprivate weak var prevButton: UIButton?
@@ -128,11 +128,3 @@ extension WebViewController: WKUIDelegate {
     }
 }
 
-extension UIScreen {
-    
-    var iPhone10: Bool {
-        let width = min(bounds.width, bounds.height)
-        let height = max(bounds.width, bounds.height)
-        return width > 320 && width <= 400 && height > 800
-    }
-}

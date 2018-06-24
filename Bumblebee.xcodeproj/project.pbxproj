@@ -11,19 +11,29 @@
 		4A304FFC20DE326600C134F4 /* ClassificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A304FFB20DE326600C134F4 /* ClassificationController.swift */; };
 		4A30500020DE3B1300C134F4 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A304FFF20DE3B1300C134F4 /* ResultViewController.swift */; };
 		4A30500220DE3B1B00C134F4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A30500120DE3B1B00C134F4 /* WebViewController.swift */; };
+		4A30500520DF3CA500C134F4 /* String+Bumblebee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A30500420DF3CA500C134F4 /* String+Bumblebee.swift */; };
+		4A30500720DF3CC400C134F4 /* UIScreen+Bumblebee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A30500620DF3CC400C134F4 /* UIScreen+Bumblebee.swift */; };
+		4A30500920DF3CF300C134F4 /* FloatingPoint+Bumblebee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A30500820DF3CF300C134F4 /* FloatingPoint+Bumblebee.swift */; };
+		4A30500D20DF3F3900C134F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A30500C20DF3F3900C134F4 /* ViewController.swift */; };
 		4A8B26A220DE06630087D207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8B26A120DE06630087D207 /* AppDelegate.swift */; };
 		4A8B26A420DE06630087D207 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8B26A320DE06630087D207 /* CameraViewController.swift */; };
 		4A8B26A720DE06630087D207 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A8B26A520DE06630087D207 /* Main.storyboard */; };
 		4A8B26A920DE06640087D207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A8B26A820DE06640087D207 /* Assets.xcassets */; };
 		4A8B26AC20DE06640087D207 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A8B26AA20DE06640087D207 /* LaunchScreen.storyboard */; };
 		4A8B26B420DE09310087D207 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8B26B320DE09310087D207 /* CameraController.swift */; };
+		E43C9EAF403875F3DBC50FEE /* Pods_Bumblebee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A270FF7A0C2C6D71462044 /* Pods_Bumblebee.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16A270FF7A0C2C6D71462044 /* Pods_Bumblebee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bumblebee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A304FF920DE31B800C134F4 /* CarRecognition.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = CarRecognition.mlmodel; sourceTree = "<group>"; };
 		4A304FFB20DE326600C134F4 /* ClassificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassificationController.swift; sourceTree = "<group>"; };
 		4A304FFF20DE3B1300C134F4 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		4A30500120DE3B1B00C134F4 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		4A30500420DF3CA500C134F4 /* String+Bumblebee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Bumblebee.swift"; sourceTree = "<group>"; };
+		4A30500620DF3CC400C134F4 /* UIScreen+Bumblebee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Bumblebee.swift"; sourceTree = "<group>"; };
+		4A30500820DF3CF300C134F4 /* FloatingPoint+Bumblebee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloatingPoint+Bumblebee.swift"; sourceTree = "<group>"; };
+		4A30500C20DF3F3900C134F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4A8B269E20DE06630087D207 /* Bumblebee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bumblebee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A8B26A120DE06630087D207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A8B26A320DE06630087D207 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +42,8 @@
 		4A8B26AB20DE06640087D207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A8B26AD20DE06640087D207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A8B26B320DE09310087D207 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		7F11A454A4C08ECB0F109B39 /* Pods-Bumblebee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bumblebee.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bumblebee/Pods-Bumblebee.release.xcconfig"; sourceTree = "<group>"; };
+		CE7CC43AA3C99774960CE599 /* Pods-Bumblebee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bumblebee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bumblebee/Pods-Bumblebee.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,16 +51,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E43C9EAF403875F3DBC50FEE /* Pods_Bumblebee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CC76AEF5D83080DB05ED004 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE7CC43AA3C99774960CE599 /* Pods-Bumblebee.debug.xcconfig */,
+				7F11A454A4C08ECB0F109B39 /* Pods-Bumblebee.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4A304FFD20DE326A00C134F4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				4A8B26A520DE06630087D207 /* Main.storyboard */,
+				4A30500C20DF3F3900C134F4 /* ViewController.swift */,
 				4A8B26A320DE06630087D207 /* CameraViewController.swift */,
 				4A304FFF20DE3B1300C134F4 /* ResultViewController.swift */,
 				4A30500120DE3B1B00C134F4 /* WebViewController.swift */,
@@ -65,11 +88,23 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		4A30500320DF3C8C00C134F4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4A30500420DF3CA500C134F4 /* String+Bumblebee.swift */,
+				4A30500620DF3CC400C134F4 /* UIScreen+Bumblebee.swift */,
+				4A30500820DF3CF300C134F4 /* FloatingPoint+Bumblebee.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		4A8B269520DE06630087D207 = {
 			isa = PBXGroup;
 			children = (
 				4A8B26A020DE06630087D207 /* Bumblebee */,
 				4A8B269F20DE06630087D207 /* Products */,
+				3CC76AEF5D83080DB05ED004 /* Pods */,
+				CB9512F41526C168B4C4D907 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +130,7 @@
 			children = (
 				4A304FFD20DE326A00C134F4 /* ViewController */,
 				4A304FFE20DE326F00C134F4 /* Controller */,
+				4A30500320DF3C8C00C134F4 /* Extension */,
 				4A8B26A120DE06630087D207 /* AppDelegate.swift */,
 			);
 			path = Source;
@@ -111,6 +147,14 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		CB9512F41526C168B4C4D907 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16A270FF7A0C2C6D71462044 /* Pods_Bumblebee.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A8B26B020DE06640087D207 /* Build configuration list for PBXNativeTarget "Bumblebee" */;
 			buildPhases = (
+				C9856AC2290FF150716DB8BC /* [CP] Check Pods Manifest.lock */,
 				4A8B269A20DE06630087D207 /* Sources */,
 				4A8B269B20DE06630087D207 /* Frameworks */,
 				4A8B269C20DE06630087D207 /* Resources */,
+				F7DA578F419EA815C719A948 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,17 +223,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C9856AC2290FF150716DB8BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bumblebee-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7DA578F419EA815C719A948 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Bumblebee/Pods-Bumblebee-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BPStatusBarAlert/BPStatusBarAlert.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BPStatusBarAlert.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bumblebee/Pods-Bumblebee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4A8B269A20DE06630087D207 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A30500720DF3CC400C134F4 /* UIScreen+Bumblebee.swift in Sources */,
 				4A8B26B420DE09310087D207 /* CameraController.swift in Sources */,
 				4A304FFA20DE31B800C134F4 /* CarRecognition.mlmodel in Sources */,
 				4A304FFC20DE326600C134F4 /* ClassificationController.swift in Sources */,
 				4A8B26A420DE06630087D207 /* CameraViewController.swift in Sources */,
+				4A30500D20DF3F3900C134F4 /* ViewController.swift in Sources */,
 				4A30500220DE3B1B00C134F4 /* WebViewController.swift in Sources */,
+				4A30500920DF3CF300C134F4 /* FloatingPoint+Bumblebee.swift in Sources */,
 				4A8B26A220DE06630087D207 /* AppDelegate.swift in Sources */,
+				4A30500520DF3CA500C134F4 /* String+Bumblebee.swift in Sources */,
 				4A30500020DE3B1300C134F4 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,16 +419,14 @@
 		};
 		4A8B26B120DE06640087D207 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE7CC43AA3C99774960CE599 /* Pods-Bumblebee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QQ553UUGK3;
 				INFOPLIST_FILE = "$(SRCROOT)/Bumblebee/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.benpark.Bumblebee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -349,16 +436,14 @@
 		};
 		4A8B26B220DE06640087D207 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F11A454A4C08ECB0F109B39 /* Pods-Bumblebee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QQ553UUGK3;
 				INFOPLIST_FILE = "$(SRCROOT)/Bumblebee/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.benpark.Bumblebee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

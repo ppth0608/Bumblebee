@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResultViewController: UIViewController {
+class ResultViewController: ViewController {
  
     @IBOutlet weak var tableView: UITableView!
     
@@ -16,10 +16,6 @@ class ResultViewController: UIViewController {
         didSet {
             tableView.reloadData()
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
     }
     
     @IBAction func closeButtonTapped(sender: UIButton) {
@@ -62,12 +58,4 @@ extension ResultViewController: UITableViewDelegate {
 class ResultCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
-}
-
-extension String {
-    
-    var specialCharacterEncoded: String {
-        let allowedCharacterSet = CharacterSet(charactersIn: "!*'();:@&=+$,/?%#[] ").inverted
-        return addingPercentEncoding(withAllowedCharacters: allowedCharacterSet) ?? ""
-    }
 }

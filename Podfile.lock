@@ -1,0 +1,16 @@
+PODS:
+  - BPStatusBarAlert (0.1.5)
+
+DEPENDENCIES:
+  - BPStatusBarAlert
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - BPStatusBarAlert
+
+SPEC CHECKSUMS:
+  BPStatusBarAlert: 0bc567e3a0f740189239f49c6c516bd61cb3c758
+
+PODFILE CHECKSUM: 09e85cc70dbe1141f524d0ab4db941a21e6a9bd9
+
+COCOAPODS: 1.5.3

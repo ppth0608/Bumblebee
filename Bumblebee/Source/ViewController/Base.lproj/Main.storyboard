@@ -45,7 +45,7 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="nGg-FU-FBI" firstAttribute="top" secondItem="Vl4-eb-YRP" secondAttribute="top" constant="30" id="7lL-MC-dVe"/>
+                                                <constraint firstAttribute="bottom" secondItem="nGg-FU-FBI" secondAttribute="bottom" constant="50" id="etH-fT-eae"/>
                                                 <constraint firstItem="nGg-FU-FBI" firstAttribute="centerX" secondItem="Vl4-eb-YRP" secondAttribute="centerX" id="qma-bp-ojb"/>
                                             </constraints>
                                         </view>
@@ -95,21 +95,16 @@
         <scene sceneID="F8i-JX-gQX">
             <objects>
                 <viewController id="BwR-PH-s6N" customClass="ResultViewController" customModule="Bumblebee" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" alpha="0.59999999999999998" contentMode="scaleToFill" id="jzr-AS-R10">
+                    <view key="view" alpha="0.40000000000000002" contentMode="scaleToFill" id="jzr-AS-R10">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUC-9d-Lhb">
-                                <rect key="frame" x="305" y="20" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <state key="normal" title="재시도">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="closeButtonTappedWithSender:" destination="BwR-PH-s6N" eventType="touchUpInside" id="rfM-8H-lfU"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap below for more information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rha-QS-h3H">
+                                <rect key="frame" x="16" y="173" width="343" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s84-9Y-zNw">
                                 <rect key="frame" x="0.0" y="249.5" width="375" height="168"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -149,14 +144,35 @@
                                     <outlet property="delegate" destination="BwR-PH-s6N" id="Xd0-yW-ss4"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUC-9d-Lhb">
+                                <rect key="frame" x="152" y="547" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="U5m-sM-zk2"/>
+                                    <constraint firstAttribute="width" constant="70" id="eAR-xJ-0aX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="재시도">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTappedWithSender:" destination="BwR-PH-s6N" eventType="touchUpInside" id="rfM-8H-lfU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="s84-9Y-zNw" secondAttribute="trailing" id="5zl-ig-qW8"/>
                             <constraint firstItem="s84-9Y-zNw" firstAttribute="centerY" secondItem="jzr-AS-R10" secondAttribute="centerY" id="8VY-TK-Jpi"/>
+                            <constraint firstItem="s84-9Y-zNw" firstAttribute="top" secondItem="Rha-QS-h3H" secondAttribute="bottom" constant="50" id="I1I-dY-LyE"/>
                             <constraint firstItem="s84-9Y-zNw" firstAttribute="centerX" secondItem="jzr-AS-R10" secondAttribute="centerX" id="ITA-yL-d8p"/>
+                            <constraint firstItem="QUC-9d-Lhb" firstAttribute="centerX" secondItem="jzr-AS-R10" secondAttribute="centerX" id="NbT-aU-Dzz"/>
+                            <constraint firstAttribute="bottom" secondItem="QUC-9d-Lhb" secondAttribute="bottom" constant="50" id="Q1J-d2-I6b"/>
                             <constraint firstItem="s84-9Y-zNw" firstAttribute="leading" secondItem="jzr-AS-R10" secondAttribute="leading" id="moo-r6-t85"/>
+                            <constraint firstItem="TXR-jd-rNs" firstAttribute="trailing" secondItem="Rha-QS-h3H" secondAttribute="trailing" constant="16" id="myz-Gq-ovv"/>
+                            <constraint firstItem="Rha-QS-h3H" firstAttribute="centerX" secondItem="jzr-AS-R10" secondAttribute="centerX" id="nXa-ZQ-kSW"/>
+                            <constraint firstItem="Rha-QS-h3H" firstAttribute="leading" secondItem="TXR-jd-rNs" secondAttribute="leading" constant="16" id="qua-qI-5Ab"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="TXR-jd-rNs"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="s84-9Y-zNw" id="7Vz-fF-qUr"/>
@@ -176,17 +192,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYf-ZF-RK5" userLabel="toolBar">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqq-xF-bfM" userLabel="prevButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="63" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="60"/>
                                         <accessibility key="accessibilityConfiguration" label="이전 화면"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="63" id="n7S-mc-Z86"/>
-                                            <constraint firstAttribute="height" constant="44" id="nha-Hv-dxz"/>
+                                            <constraint firstAttribute="width" constant="70" id="n7S-mc-Z86"/>
+                                            <constraint firstAttribute="height" constant="60" id="nha-Hv-dxz"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="뒤로"/>
+                                        <state key="normal" title="Back"/>
                                         <state key="highlighted">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -195,13 +211,13 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6I-hJ-qli" userLabel="nextButton">
-                                        <rect key="frame" x="79" y="0.0" width="63" height="44"/>
+                                        <rect key="frame" x="86" y="0.0" width="70" height="60"/>
                                         <accessibility key="accessibilityConfiguration" label="다음 화면"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="63" id="lk7-Wd-E6N"/>
+                                            <constraint firstAttribute="width" constant="70" id="lk7-Wd-E6N"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="앞으로"/>
+                                        <state key="normal" title="Foward"/>
                                         <state key="highlighted">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -210,25 +226,25 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1f-yC-TnT" userLabel="refreshButton">
-                                        <rect key="frame" x="167" y="0.0" width="70" height="44"/>
+                                        <rect key="frame" x="181" y="0.0" width="70" height="60"/>
                                         <accessibility key="accessibilityConfiguration" label="새로고침"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="f23-Aw-oWS"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="새로고침"/>
+                                        <state key="normal" title="Reload"/>
                                         <connections>
                                             <action selector="refreshButtonTapped:" destination="ggq-J3-dIb" eventType="touchUpInside" id="ScI-B9-zCU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udm-0M-5j3" userLabel="closeButton">
-                                        <rect key="frame" x="312" y="0.0" width="63" height="44"/>
+                                        <rect key="frame" x="305" y="0.0" width="70" height="60"/>
                                         <accessibility key="accessibilityConfiguration" label="닫기"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="63" id="Du5-95-0Ag"/>
+                                            <constraint firstAttribute="width" constant="70" id="Du5-95-0Ag"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="닫기"/>
+                                        <state key="normal" title="Close"/>
                                         <state key="highlighted">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -243,7 +259,7 @@
                                     <constraint firstItem="g1f-yC-TnT" firstAttribute="leading" secondItem="K6I-hJ-qli" secondAttribute="trailing" constant="25" id="YPM-FN-EEE"/>
                                     <constraint firstItem="Udm-0M-5j3" firstAttribute="height" secondItem="Bqq-xF-bfM" secondAttribute="height" id="d3a-Y0-tyr"/>
                                     <constraint firstItem="g1f-yC-TnT" firstAttribute="height" secondItem="Bqq-xF-bfM" secondAttribute="height" id="g5f-VU-42k"/>
-                                    <constraint firstAttribute="height" constant="44" id="l4l-fi-IjN">
+                                    <constraint firstAttribute="height" constant="60" id="l4l-fi-IjN">
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="constant_10">
                                                 <integer key="value" value="78"/>

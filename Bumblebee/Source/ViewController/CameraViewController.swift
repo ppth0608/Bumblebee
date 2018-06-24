@@ -10,7 +10,7 @@ import UIKit
 import Vision
 import CoreML
 
-class CameraViewController: UIViewController {
+class CameraViewController: ViewController {
     
     @IBOutlet weak var capturePreviewView: UIView!
     
@@ -32,15 +32,16 @@ class CameraViewController: UIViewController {
             classificationController.setup(mlmodel: mlmodel)
             classificationController.delegate = self
         } catch {
-            print(error)
+            showStatusBarNotification(message: "Sorry, Please Restart App 😭")
         }
         configureCameraController()
     }
     
     func configureCameraController() {
         cameraController.prepare { error in
-            if let error = error {
-                print(error)
+            guard error == nil else {
+                self.showStatusBarNotification(message: "Sorry, Please Restart App 😭")
+                return
             }
             try? self.cameraController.displayPreview(on: self.capturePreviewView)
         }
@@ -49,7 +50,7 @@ class CameraViewController: UIViewController {
     @IBAction func captureButtonTapped(_ sender: UIButton) {
         cameraController.captureImage { image, error in
             guard error == nil else {
-                print(error?.localizedDescription ?? "")
+                self.showStatusBarNotification(message: "Sorry, Please Restart App 😭")
                 return
             }
             self.classificationController.classfify(image: image)
@@ -70,7 +71,7 @@ extension CameraViewController: ClassificationDelegate {
     
     func classfy(_ controller: ClassificationController, didDetect items: [ClassificationResult]) {
         if items.isEmpty {
-            print("items is empty so notification gogo")
+            showStatusBarNotification(message: "Failed To Recognize Car Model 😭")
         } else {
             resultViewController?.items = items
             resultContainerView?.isHidden = false
