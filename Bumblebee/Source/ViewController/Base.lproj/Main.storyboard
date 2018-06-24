@@ -29,7 +29,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGg-FU-FBI">
                                                     <rect key="frame" x="152" y="30" width="70" height="70"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" red="0.99215686274509807" green="0.68627450980392157" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="70" id="fdF-jM-mgn"/>
                                                         <constraint firstAttribute="width" constant="70" id="iT2-9v-Lca"/>
@@ -145,10 +145,10 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUC-9d-Lhb">
-                                <rect key="frame" x="152" y="547" width="70" height="70"/>
+                                <rect key="frame" x="152.5" y="547" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="U5m-sM-zk2"/>
-                                    <constraint firstAttribute="width" constant="70" id="eAR-xJ-0aX"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="eAR-xJ-0aX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="재시도">
@@ -167,10 +167,12 @@
                             <constraint firstItem="s84-9Y-zNw" firstAttribute="centerX" secondItem="jzr-AS-R10" secondAttribute="centerX" id="ITA-yL-d8p"/>
                             <constraint firstItem="QUC-9d-Lhb" firstAttribute="centerX" secondItem="jzr-AS-R10" secondAttribute="centerX" id="NbT-aU-Dzz"/>
                             <constraint firstAttribute="bottom" secondItem="QUC-9d-Lhb" secondAttribute="bottom" constant="50" id="Q1J-d2-I6b"/>
+                            <constraint firstItem="QUC-9d-Lhb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TXR-jd-rNs" secondAttribute="leading" constant="20" id="ciJ-rj-eFy"/>
                             <constraint firstItem="s84-9Y-zNw" firstAttribute="leading" secondItem="jzr-AS-R10" secondAttribute="leading" id="moo-r6-t85"/>
                             <constraint firstItem="TXR-jd-rNs" firstAttribute="trailing" secondItem="Rha-QS-h3H" secondAttribute="trailing" constant="16" id="myz-Gq-ovv"/>
                             <constraint firstItem="Rha-QS-h3H" firstAttribute="centerX" secondItem="jzr-AS-R10" secondAttribute="centerX" id="nXa-ZQ-kSW"/>
                             <constraint firstItem="Rha-QS-h3H" firstAttribute="leading" secondItem="TXR-jd-rNs" secondAttribute="leading" constant="16" id="qua-qI-5Ab"/>
+                            <constraint firstItem="TXR-jd-rNs" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QUC-9d-Lhb" secondAttribute="trailing" constant="20" id="u4e-UL-8Vv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TXR-jd-rNs"/>
                     </view>
@@ -198,7 +200,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="60"/>
                                         <accessibility key="accessibilityConfiguration" label="이전 화면"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="n7S-mc-Z86"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="n7S-mc-Z86"/>
                                             <constraint firstAttribute="height" constant="60" id="nha-Hv-dxz"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -214,7 +216,7 @@
                                         <rect key="frame" x="86" y="0.0" width="70" height="60"/>
                                         <accessibility key="accessibilityConfiguration" label="다음 화면"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="lk7-Wd-E6N"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="lk7-Wd-E6N"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Foward"/>
@@ -229,7 +231,7 @@
                                         <rect key="frame" x="181" y="0.0" width="70" height="60"/>
                                         <accessibility key="accessibilityConfiguration" label="새로고침"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="f23-Aw-oWS"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="f23-Aw-oWS"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Reload"/>
@@ -241,7 +243,7 @@
                                         <rect key="frame" x="305" y="0.0" width="70" height="60"/>
                                         <accessibility key="accessibilityConfiguration" label="닫기"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="Du5-95-0Ag"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="Du5-95-0Ag"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Close"/>
@@ -253,7 +255,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.68627450980000004" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Udm-0M-5j3" secondAttribute="trailing" id="Vam-UR-33i"/>
                                     <constraint firstItem="g1f-yC-TnT" firstAttribute="leading" secondItem="K6I-hJ-qli" secondAttribute="trailing" constant="25" id="YPM-FN-EEE"/>

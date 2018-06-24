@@ -27,7 +27,8 @@ class ResultViewController: ViewController {
         case "Web":
             let result = (sender as? String) ?? ""
             if let destination = segue.destination as? WebViewController {
-                let urlString = "https://m.search.daum.net/search?w=tot&q=\(result.specialCharacterEncoded)"
+                let newString = result.replacingOccurrences(of: " ", with: "+")
+                let urlString = "https://www.google.co.kr/search?q=\(newString)"
                 destination.url = URL(string: urlString)
             }
         default: return
